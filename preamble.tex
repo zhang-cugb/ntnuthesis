@@ -1,7 +1,25 @@
 \documentclass{ntnuthesis}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
-\bibliographystyle{abbrvnat}
+\bibliographystyle{agsm}
+
+
+% Nomenclature
+\usepackage{nomencl}
+\makenomenclature
+%% This code creates the NOMENCLATURE groups
+% -----------------------------------------
+\usepackage{etoolbox}
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{A}{Abbreviations}{%
+  \ifstrequal{#1}{S}{Symbols}{%
+  \ifstrequal{#1}{O}{Other Symbols}{}}}%
+]}
+% -----------------------------------------
+% Make index
+\usepackage{makeidx}
+\makeindex
 % Colored text
 \usepackage[usenames,dvipsnames]{xcolor}
 % American Mathematical Society packages
@@ -19,11 +37,15 @@
 \usepackage{sistyle}
 % hyperlinks throughout the doc
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor={blue}
+}
 % Add quotes at the beginning of a chapter
 \usepackage{epigraph}
 \setlength{\epigraphwidth}{.5\textwidth}
 % Allows to write Unicode e.g., Blåbær syltetøy
-\usepackage{ucs}
+% \usepackage{ucs}
 % correctly typeset chemical compounds e.g., \ce{H3PO4}
 \usepackage[version=4]{mhchem}
 %
