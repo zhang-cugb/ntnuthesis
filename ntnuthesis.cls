@@ -72,6 +72,7 @@
 
 % Necessary to include the NTNU logo
 \RequirePackage{graphicx}
+\RequirePackage[usenames,dvipsnames]{xcolor}
 
 %
 % Define the commands to set the variables used by \maketitle
@@ -111,7 +112,7 @@
 	\Department}
 	\printandscreen{\vspace{2cm}}{\vspace{0.75cm}}
 
-	\includegraphics[width=0.4\textwidth]{fig/logo/NTNUlogo}
+	\includegraphics[width=0.4\textwidth]{img/logo/NTNUlogo}
 
 	\newpage
 	{~}
@@ -143,15 +144,39 @@
 
 \AtBeginDocument{
 	\pagestyle{fancy}
-	\renewcommand{\headrulewidth}{0.4pt}
-	\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
-	\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
-	\rhead{\nouppercase{\leftmark}}
-	\lhead{\nouppercase{\rightmark}}
-	\printandscreen{	
-		\fancyhead[LE,RO]{\textbf{\thepage}}
-	}{	
-		\fancyhead[R]{\textbf{\thepage}}
-	}
+	\fancyhead{}
+	\fancyhead[LE,RO]{\thepage}
+	\fancyhead[LO,RE]{\nouppercase{\leftmark}}
+	\renewcommand{\headrulewidth}{.4pt}
+% 	\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
+% 	\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
+% 	\rhead{\nouppercase{\leftmark}}
+% 	\lhead{\nouppercase{\rightmark}}
+% 	\printandscreen{	
+% 		\fancyhead[LE,RO]{\textbf{\thepage}}
+% 	}{	
+% 		\fancyhead[R]{\textbf{\thepage}}
+% 	}
 	\fancyfoot[C]{}
 }
+
+\newenvironment{dedication}
+  {\clearpage           % we want a new page
+   \thispagestyle{empty}% no header and footer
+   \vspace*{\stretch{1}}% some space at the top 
+   \itshape             % the text is in italics
+   \raggedleft          % flush to the right margin
+  }
+  {\par % end the paragraph
+   \vspace{\stretch{3}} % space at bottom is three times that at the top
+   \clearpage           % finish off the page
+  }
+
+\newenvironment{cp}[1]
+    {
+        from \colorbox{Apricot}{#1} \color{orange}
+        
+    }
+    {
+          
+    }
