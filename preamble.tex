@@ -2,12 +2,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \bibliographystyle{agsm}
-
-
-% Nomenclature
+%% use bib entries
+\usepackage{usebib}
+\newbibfield{institution}
+\bibinput{ref}
+%% Nomenclature
 \usepackage{nomencl}
 \makenomenclature
-%% This code creates the NOMENCLATURE groups
+\setlength{\nomlabelwidth}{.2\textwidth}
+% NOMENCLATURE groups
 % -----------------------------------------
 \usepackage{etoolbox}
 \renewcommand\nomgroup[1]{%
@@ -17,39 +20,42 @@
   \ifstrequal{#1}{O}{Other Symbols}{}}}%
 ]}
 % -----------------------------------------
-% Make index
+%% Make index
 \usepackage{makeidx}
 \makeindex
-% Colored text
+%% color boxes around text
+\usepackage{tcolorbox}
+%% images and graphics
+\usepackage{graphicx}
+% \graphicspath{ {./img/} }
+%% Colored text
 \usepackage[usenames,dvipsnames]{xcolor}
-% American Mathematical Society packages
+%% American Mathematical Society packages
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
-% Build a thesis index
-\usepackage{makeidx}
-% Print program code
+%% Print program code
 \usepackage{listings}
-% Better looking tables
+%% Better looking tables
 \usepackage{booktabs}
-% Handle formatting of numbers and units
+%% Handle formatting of numbers and units
 \usepackage{sistyle}
-% hyperlinks throughout the doc
+%% hyperlinks throughout the doc
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     citecolor={blue}
 }
-% Add quotes at the beginning of a chapter
+%% Add quotes at the beginning of a chapter
 \usepackage{epigraph}
 \setlength{\epigraphwidth}{.5\textwidth}
-% Allows to write Unicode e.g., Blåbær syltetøy
+%% Allows to write Unicode e.g., Blåbær syltetøy
 % \usepackage{ucs}
-% correctly typeset chemical compounds e.g., \ce{H3PO4}
+%% correctly typeset chemical compounds e.g., \ce{H3PO4}
 \usepackage[version=4]{mhchem}
 %
-% Set space between a paragraph and the preceding text
+%% Set space between a paragraph and the preceding text
 \setlength{\parskip}{.75em}
 
 
