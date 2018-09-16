@@ -1,3 +1,5 @@
+\PassOptionsToPackage{table}{xcolor}
+
 \documentclass{ntnuthesis}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
@@ -20,6 +22,8 @@
   \ifstrequal{#1}{O}{Other Symbols}{}}}%
 ]}
 % -----------------------------------------
+\usepackage{xcolor}
+% \PassOptionsToPackage{table}{xcolor}
 %% Make index
 \usepackage{makeidx}
 \makeindex
@@ -28,8 +32,9 @@
 %% images and graphics
 \usepackage{graphicx}
 % \graphicspath{ {./img/} }
-%% Colored text
-\usepackage[usenames,dvipsnames]{xcolor}
+% %% TABLES AND TABLE COLORS
+% \usepackage{tabu}
+% \usepackage{longtable}
 %% American Mathematical Society packages
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -39,6 +44,8 @@
 \usepackage{listings}
 %% Better looking tables
 \usepackage{booktabs}
+\usepackage{multirow}
+\newcommand{\tabitem}{\quad\llap{\textbullet}~~}
 %% Handle formatting of numbers and units
 \usepackage{sistyle}
 %% hyperlinks throughout the doc
