@@ -180,3 +180,7 @@
     {
           
     }
+    
+\newcommand{\why}{\colorbox{Apricot}{why?}}
+\newcommand{\what}{\colorbox{Apricot}{?}}
+
