@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{natbib} \renewcommand{\bibname}{References}
 \bibliographystyle{agsm}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 %% use bib entries
 \usepackage{usebib}
 \newbibfield{institution}
@@ -32,6 +34,8 @@
 %% images and graphics
 \usepackage{subcaption}
 \usepackage{graphicx}
+\usepackage{adjustbox}
+
 % \graphicspath{ {./img/} }
 % %% TABLES AND TABLE COLORS
 % \usepackage{tabu}
@@ -53,7 +57,8 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    citecolor={blue}
+    citecolor={blue},
+    linkcolor={blue}
 }
 %% Add quotes at the beginning of a chapter
 \usepackage{epigraph}
