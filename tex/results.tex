@@ -2,7 +2,7 @@
 % -------------------------
 %% QUOTE
 \vspace*{\fill}
-\epigraph{If you're doing an experiment, you should report everything that you think might make it invalid — not only what you think is right about it; other causes that could possibly explain your results; and things you thought of that you've eliminated by some other experiment, and how they worked — to make sure the other fellow can tell they have been eliminated.}%
+\epigraph{If you're doing an experiment, you should report everything that you think might make it invalid — not only what you think is right about it; other causes that could possibly explain your results; and things you thought of th||you've eliminated by some other experiment, and how they worked — to make sure the other fellow can tell they have been eliminated.}%
 {\textit{Surely You're Joking, Mr. Feynman!, p. 341}\\ \textsc{Richard Feynman}}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 %%
@@ -109,7 +109,7 @@ In Series 44, the concentrations of both amide POSS and PVS was reduced by a fac
 \subsection{Gels based on lactamide POSS}
 Figure \ref{cht:s23visc80} shows measured viscosities for the samples collected early and at the end of the injection during Experiment 1 (cf. Section \ref{sec:inSituGelling}). Except for the sample measured after 12 days at 0.7 s$^{-1}$, a clear trend is seen in the figure showing a slow increase in viscosity the first 25 days and then a faster increase thereon.
 
-\begin{figure}
+\begin{figure} 
     \centering
     \makebox[\textwidth][c]{\includegraphics[width=\textwidth]{img/cht/s23visc80.png}}
     \caption{Aging of solutions in Series 23 collected during injection of nanoparticle/polymer solution in a core. Samples collected early (left) and collected at the end of the injection (right).}
@@ -118,16 +118,383 @@ Figure \ref{cht:s23visc80} shows measured viscosities for the samples collected 
 
 \section{Transport of polymer and nanoparticles through porous media}
 \subsection{Injection of nanoparticles in Bentheimer sandstone}
+Figure \ref{cht:injexp1} shows the results from injection of 1000 ppm nanoparticles in SSW as normalized concentration and normalized conductivity vs. PVs injected. The differential pressure across the core is also shown. The injection rate was 1 ml/min. The first dotted event line indicates one PV injected nanoparticle (and 100 \% SSW in the separate conductivity experiment). At 2.3 PVs injected, the nanoparticle solution is replaced with SSW (80 \% SSW for the conductivity measurement) and so forth.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp1bent.png}
+    \caption{Experiment 1, injection of nanoparticles into Bentheimer sandstone}
+    \label{cht:injexp1}
+\end{figure}
+
+As seen in Figure \ref{cht:injexp1}, some retention of nanoparticles occurred during the experiment. It is also seen that some of the retained matter was released during SSW flooding. In total, three flooding experiments were conducted which yielded results similar to Experiment 1 shown in Figure \ref{cht:injexp1}.
+
+Table \ref{tab:ipvexp1} summarizes calculated IPVs and retention of nanoparticles during the experiment. The IPVs were found from the difference between the areas under the red and green curves for stages 2 and 4 of the experiment in Figure \ref{cht:injexp1} (see also Figure \what [flooding profiles]). The area under the red curves are ideally equal to one. IPVs less than zero indicate that retained nanoparticles are released during subsequent SSW flooding.
+
+Retention of nanoparticles were found from mass balances at each stage. After Stage 1, there was an excess of 4.3 mg nanoparticles in the core, assuming that the hole pore volume was filled with nanoparticle solution. After Stage 2 some of the nanoparticles were released, leaving 2.5 mg in the core at the end of this stage. In Stage 3 more nanoparticles were injected and an excess of 5.8 mg was calculated at the end of the stage. Finally, in Stage 4 some nanoparticles are released leaving 4.7 mg in the core at the end of the experiment. By dividing the retention by the core mass, retention in mg/g rock was found.
+
+During Stage 1, 1.89 mg nanoparticles were retained per PV nanoparticles injected, which were reduced to 2.0 mg/PV nanoparticles after SSW injection in Stage 2. During Stage 3, 0.96 mg nanoparticles were retained per PV injected at the stage. 
+
+Finally, in the last row of Table \ref{tab:ipvexp1}, retention as percentage of injected nanoparticles at stages 1 and 3 are given as well as retention as percentage of total injected nanoparticles at the end of stages 2 and 4. 
+
+\begin{table} 
+\small
+\centering
+\caption{Inaccessible pore volume (IPV) and retention of nanoparticles during Experiment 1.}
+\label{tab:ipvexp1}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV         & [PV]          & -         & -0.03     & -         & -0.02     \\
+Retention   & [mg]          & 4.3       & 2.5       & 5.8       & 4.7       \\ 
+Retention   & [mg/g rock]   & 0.009     & 0.005     & 0.013     & 0.010     \\ 
+Retention   & [mg/PV inj]   & 1.89      & -         & 0.96      & -         \\
+Retention   & [\% of inj NP]& 3.6       & 2.0       & 1.8       & 1.5       \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Injection of polymer in Bentheimer sandstone}
+Figure \ref{cht:injexp2} shows the results from injection of 1000 ppm polymer as normalized concentration and normalized conductivity vs. PVs injected. The differential pressure across the core is also shown. The injection rate was 0.5 ml/min. The solid lines indicate start of a stage, and each dotted line indicates one subsequent PV. 
+
+Figure \ref{cht:injexp2Comp1-3} compares produced normalized polymer concentration in stages 1 and 3. The conductivity response is from Stage 1. The area between the two polymer response curves represent the adsorption of polymer, cf. Figure \what [flooding profiles].
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp2bent.png}
+    \caption{Experiment 2, injection of polymer into Bentheimer sandstone}
+    \label{cht:injexp2}
+\end{figure}
+
+\begin{figure}[h!   ]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp2bentComp1-3.png}
+    \caption{Experiment 2, injection of polymer into Bentheimer sandstone. Comparison of polymer responses in stages 1 and 3.}
+    \label{cht:injexp2Comp1-3}
+\end{figure}
+
+
+Table \ref{tab:ipvexp2} summarizes calculated IPVs , adsorbed polymer and mechanical entrapment of polymer during the experiment. Total retention of polymer minus adsorbed polymer is denoted mechanical entrapment. Mechanical entrapment was found from mass balances at each stage taking adsorption into account. At the end of stages 1 and 3 it was assumed that the accessible pore volume (1-IPV) was filled with polymer solution of injected concentration. Further, in the mass balances it was assumed that polymer adsorbed irreversibly to the rock. Thus, the 4.8 mg polymer adsorbed during Stage 1 remained adsorbed throughout the experiment.
+
+\begin{table} 
+\small
+\centering
+\caption{Inaccessible pore volume (IPV), adsorption and mechanical entrapment of polymer during Experiment 2.}
+\label{tab:ipvexp2}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV                & [PV]           & -         & 0.07     & -         & -0.02     \\
+Mech. entrapment   & [mg]          & 3.3       & 3.3       & 5.8       & 4.7       \\ 
+Mech. entrapment   & [mg/g rock]   & 0.007     & 0.007     & 0.013     & 0.010     \\ 
+Mech. entrapment   & [mg/PV inj]   & 0.74      & -         & 0.96      & -         \\
+Mech. entrapment   & [\% of inj pol.]& 1.3       & 1.3       & 1.8       & 1.5       \\ 
+Adsorption         & [mg]          & 4.8       &   \multicolumn{3}{c}{\multirow{2}{15em}{from difference in response curves of stages 1 and 3}}        \\
+Adsorption         & [mg/g rock]   & 0.10      &  \multicolumn{3}{c}{}    \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+After Stage 1 there was 3.3 mg polymer trapped in the core. This was increased to 10 mg during the Stage 3 polymer injection. During Stage 1 polymer injection 1.3 \% of the polymer that was injected was mechanically entrapped. At Stage 3, 3.3 \% of the polymer injected was trapped. The 10 mg polymer mechanically entrapped at the end of Stage 4 correspond to 2.3 \% of the in total 448 mg polymer that was injected during the experiment. In calculation of the IPVs it was assumed that no entrapped polymer was released.
+
+\subsection{Injection of nanoparticles and polymer in Bentheimer sandstone}
+
+Figure \ref{cht:injexp3bent} shows the results from injection of 2000 ppm nanoparticles and 500 ppm polymer as normalized concentration and normalized conductivity vs. PVs injected. The differential pressure across the core is also shown. The injection rate was 0.27 ml/min. The nanoparticle and polymer concentrations were set in order to get a practical calibration curve, cf. Figure 5.5. The UV absorption of polymer was much higher than for nanoparticles.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp3bent.png}
+    \caption{Experiment 3, injection of nanoparticles and polymer into Bentheimer sandstone.}
+    \label{cht:injexp3bent}
+\end{figure}
+
+The most striking results in Figure \ref{cht:injexp3bent} is the missing part of the normalized response of nanoparticles in the first part of Stage 1. A response more like the Stage 3 response was expected based on the experiment with only nanoparticles, cf. Figure \ref{cht:injexp1}. However, the shown response is used in the mass balance calculations.
+%%%
+
+Mass balance calculations for nanoparticles and polymer are shown in Table \ref{tab:ipvexp3} and Table \ref{tab:ipvexp3pol}. Absorption of polymer was calculated from the polymer responses in Stages 1 and 3, cf.  Figure \ref{cht:injexp3bentPol}. As the responses did not coincide completely at relative responses of 1.0 adsorption was estimated in two different manners. In the first approach, the areas under both curves were found by numerical integration and subtracted from the total pore volumes polymer injected in the two stages.  This gave a difference of 0.0034 PV or 0.09 mg polymer. In the second approach, the difference in injected pore volumes at a relative response of 0.5 was used. This difference was 0.086 PV or 2.23 mg polymer. This figure was used in the mass balance calculations.
+
+From Table  \ref{tab:ipvexp3} it is seen that there apparently was a significant retention of nanoparticles during Stage 1. Some of the retained mater was released during Stage 2 resulting in a negative IPV. The retention during stage 3 was low, only 0.87 \% of the injected matter. More nanoparticles were released in Stage 3, again giving a negative IPV. The overall retention of nanoparticles amounted to 7.9 \% of injected matter.
+
+\begin{table} 
+\small
+\centering
+\caption{Inaccessible pore volume (IPV) and retention of nanoparticles during Experiment 3.}
+\label{tab:ipvexp3}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV         & [PV]          & -         & -0.16     & -         & -0.08     \\
+Retention   & [mg]          & 153       & 125       & 132       & 114       \\ 
+Retention   & [mg/g rock]   & 0.35      & 0.28     & 0.30     & 0.26     \\ 
+Retention   & [mg/PV inj]   & 0.47      & -         & 0.02      & -         \\
+Retention   & [\% of inj NP]& 23        & 19       & 0.87       & 7.9       \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\small
+\centering
+\caption{Inaccessible pore volume (IPV), adsorption and mechanical entrapment of polymer during Experiment 3.}
+\label{tab:ipvexp3pol}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV                & [PV]           & -         & 0.07     & -         & 0.13     \\
+Mech. entrapment   & [mg]          & 2.5       & 2.5      & 6.88       & 6.88       \\ 
+Mech. entrapment   & [mg/g rock]   & 0.0057   & 0.0057     & 0.016     & 0.016     \\ 
+Mech. entrapment   & [mg/PV inj]   & 0.39      & -         & 0.58      & -         \\
+Mech. entrapment   & [\% of inj pol.]& 1.5       & 1.5       & 2.24       & 1.90       \\ 
+Adsorption         & [mg]          & 2.22      &   \multicolumn{3}{c}{\multirow{2}{15em}{from difference in response curves of stages 1 and 3}}        \\
+Adsorption         & [mg/g rock]   & 0.005      &  \multicolumn{3}{c}{}    \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.85\textwidth]{img/cht/injexp3bentPol.png}
+    \caption{Experiment 3 injection of polymer into Bentheimer sandstone. Comparison of polymer responses in stages 1 and 3.}
+    \label{cht:injexp3bentPol}
+\end{figure}
+
+The adsorption, IPVs and mechanically entrapped polymer in Experiment 3 are all of the same magnitude as for Experiment 2 (only polymer injection). The differences are likely within the uncertainty of the measurements and following calculations that are based on the numerical integration of response curves.
 
 
 
+\subsection{Injection of nanoparticles in Berea sandstone}
+In the experiments with nanoparticle injection into Berea sandstone severe problems with both the refractive index and UV detectors were experienced. In total three experiments were conducted. The problem was that the detector responses did not reach the bypass values measured after stages 1 and 3. Furthermore, the bypass values were not identical after the two stages. For example; during Stage 1 the maximum refractive index response measured was 60.4, whereas the bypass value was 64.1. for Stage 3 the corresponding measurements were 78.2 and 82.0. Thus, two approaches were used to calculated IPV and retention. In the first approach, the detector response was normalized to the bypass values, whereas in the second approach, the maximum measured values during flooding through the core were used. The response curves for the two approaches are shown in Figure \ref{cht:injexp4ber1} and Figure \ref{cht:injexp4ber2}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp4ber1.png}
+    \caption{Experiment 4, injection of nanoparticles into Berea sandstone. Detector response normalized to bypass values.}
+    \label{cht:injexp4ber1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp4ber2.png}
+    \caption{Experiment 4, injection of nanoparticles into Berea sandstone. Detector response normalized to maximum measured values during nanoparticle injection.}
+    \label{cht:injexp4ber2}
+\end{figure}
+
+Figure \ref{cht:IPVber} shows IPVs calculated for different experiments and calculation approaches. The average value and its standard deviation is also shown. With one exception, the IPVs are negative, indicating release of retained nanoparticles during SSW injection at stages 2 and 4. Retention of nanoparticles after the various stages are shown in Figure \ref{cht:retentionBer}. The values for Stage 3 is retention at this stage, whereas the Stage 4 retention is the amount of nanoparticles at the end of the stage in percentage of the total amount injected at stages 1 and 3.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/IPVber.png}
+    \caption{IPVs calculated for injection of nanoparticles into Berea sandstone. Results from different experiments and calculation methods.}
+    \label{cht:IPVber}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/retentionBer.png}
+    \caption{Retention of nanoparticles during injection into Berea sandstone. Results from different experiments and calculation methods.}
+    \label{cht:retentionBer} % 5.14
+\end{figure}
+
+From Figures \ref{cht:IPVber} and \ref{cht:retentionBer} it is seen that the two UV measurements gave significantly higher retention compared to the others. The true values can thus be lower than the averages.
+
+The very fast conductivity responses and significantly tailing, as seen in Figure 5.11 and Figure 5.12, indicate that the rock material was fairly in-homogeneous. During injection of SSW (with the core initially at 80 \% SSW) the conductivity started to increase already after 0.16 PV injection as shown in Figure \ref{cht:CondBerNorm}. Conductivity was measured before nanoparticle injection.
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/CondBerNorm.png}
+    \caption{Normalized conductivity response for Berea sandstone core (July-16).}
+    \label{cht:CondBerNorm}
+\end{figure}
+
+\subsection{Injection of polymer in Berea sandstone}
+Figure \ref{cht:injexp5ber1} shows the results from injection of 1000 ppm polymer as normalized concentration and normalized conductivity vs. PVs injected. The differential pressure across the core is also shown. The injection rate was 0.27 ml/min.
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp5ber1.png}
+    \caption{Experiment 5, injection of polymer into Berea sandstone.}
+    \label{cht:injexp5ber1}
+\end{figure}
+
+Figure \ref{cht:injexp5ber2} compares produced normalized polymer concentration in stages 1 and 3. The conductivity response is from Stage 1. The area between the two polymer response curves represent the adsorption of polymer. Note the fast response to polymer in the second slug (Stage 3).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp5ber2.png}
+    \caption{Experiment 5 injection of polymer into Berea sandstone. Comparison of polymer responses in stages 1 and 3.}
+    \label{cht:injexp5ber2}
+\end{figure}
+
+Table \ref{tab:ipvexp5pol} summarizes calculated IPVs, adsorbed polymer and mechanical entrapment of polymer during the experiment. Total retention of polymer minus adsorbed polymer is denoted mechanical entrapment. Mechanical entrapment was found from mass balances at each stage taking adsorption into account. At the end of stages 1 and 3 it was assumed that the accessible pore volume (1-IPV) was filled with polymer solution of injected concentration. Further, in the mass balances it was assumed that polymer adsorbed irreversibly to the rock. Thus, the 19.3 mg polymer adsorbed during Stage 1 remained adsorbed throughout the experiment.
+
+After Stage 1, there remained 27.8 mg polymer trapped in the core. This was increased to 55.8 mg during the Stage 3 polymer injection. During Stage 1 polymer injection 8.3\% of the injected polymer was mechanically entrapped. At Stage 3, 12.5 \% of the injected polymer was trapped. The 55.6 mg mechanically entrapped polymer at the end of Stage 4 corresponds to 10.0\% of a total of 558 mg polymer that was injected during the experiment. In calculation of the IPVs, it was assumed that no entrapped polymer was released during SSW injection.
+
+\begin{table}
+\small
+\centering
+\caption{Inaccessible pore volume (IPV), adsorption and mechanical entrapment of polymer during Experiment 5.}
+\label{tab:ipvexp5pol}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV                & [PV]           & -         & 0.60     & -         & 0.59     \\
+Mech. entrapment   & [mg]          & 27.8       & 28.0      & 55.8       & 55.6       \\ 
+Mech. entrapment   & [mg/g rock]   & 0.095   & 0.096     & 0.152     & 0.151     \\ 
+Mech. entrapment   & [mg/PV inj]   & 3.59      & -         & 5.4      & -         \\
+Mech. entrapment   & [\% of inj pol.]& 8.3       & 8.3      & 12.5       &10.0        \\ 
+Adsorption         & [mg]          & 19.3      &   \multicolumn{3}{c}{\multirow{2}{15em}{from difference in response curves of stages 1 and 3}}        \\
+Adsorption         & [mg/g rock]   & 0.04      &  \multicolumn{3}{c}{}    \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Injection of nanoparticles and polymer in Berea sandstone}
+Likewise, for the experiment with injection of nanoparticles and polymer into Berea sandstone, there was difficulties in measurement of produced nanoparticles. As for Bentheimer, the polymer concentration was determined using the response of the capillary viscometer and a calibration curve. For nanoparticles, models for refractive index and UV responses were used, similar to the model shown in Figure \ref{cht:uv}. 2000 ppm nanoparticles and 500 ppm polymer were injected with a rate of 0.50 ml/min. 
+
+Response curves for the experiments are shown in Figure \ref{cht:injexp6ber1}, which also show measured differential pressures. For the refractive index detector, the produced nanoparticle concentration approached the injected concentration during Stage 3 and the average measured concentration in the last part of the stage was used a reference for the normalization. For the UV response, there was apparently an overshooting in produced concentration between 14 and 16 PVs and an undershooting from approximately 16 PVs and until the start of Stage 4. A reference value that cancelled the over-and undershooting was used. 
+
+Figure \ref{cht:injexp6ber2} compares produced normalized polymer concentration in stages 1 and 3. The area between the two polymer response curves represent the adsorption of polymer. Note the fast response to polymer in the second slug (Stage 3). An almost similar fast response was also observed with only polymer in Berea sandstone (see Figure \ref{cht:injexp5ber2}).
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp6ber1.png}
+    \caption{Experiment 6, injection of nanoparticles and polymer into Berea sandstone.}
+    \label{cht:injexp6ber1}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/injexp6ber2.png}
+    \caption{Experiment 6, injection of nanoparticles and polymer into Berea sandstone. Comparison of polymer responses in stages 1 and 3.}
+    \label{cht:injexp6ber2}
+\end{figure}
+
+Mass balance calculations for nanoparticles and polymer are shown in Table \ref{tab:ipvexp6} to Table \ref{tab:ipvexp6pol}. Absorption of polymer was calculated from the polymer responses in Stages 1 and 3, cf. Figure \ref{cht:injexp6ber2}. 
+
+\begin{table}[p]
+\small
+\centering
+\caption{Inaccessible pore volume (IPV) and retention of nanoparticles during Experiment 6. Calculations based on refractive index detector response.}
+\label{tab:ipvexp6}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV         & [PV]          & -         & 0.04     & -         & -0.04     \\
+Retention   & [mg]          & 128.98    & 132.66   & 216.97       & 214.01       \\ 
+Retention   & [mg/g rock]   & 0.268     & 0.276    & 0.451     & 0.445     \\ 
+Retention   & [mg/PV inj]   & 26.88     & -        & 11.72      & -         \\
+Retention   & [\% of inj NP]& 30.1      & 31.0     & 0.8713.1       & 20.0       \\ 
+\bottomrule
+\end{tabular}
+\end{table}
 
 
+\begin{table}[p]
+\small
+\centering
+\caption{Inaccessible pore volume (IPV) and retention of nanoparticles during Experiment 6. Calculations based on UV detector response.}
+\label{tab:ipvexp6uv}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV         & [PV]          & -         & -0.01     & -         & -0.34     \\
+Retention   & [mg]          & 152.6     & 122.9     & 102.0     & 71.7       \\ 
+Retention   & [mg/g rock]   & 0.32      & 0.26      & 0.21      & 0.15     \\ 
+Retention   & [mg/PV inj]   & 31.8      & -         & -2.9      & -         \\
+Retention   & [\% of inj NP]& 35.6      & 28.7      & -3.2      & 6.7       \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[p]
+\small
+\centering
+\caption{Inaccessible pore volume (IPV), adsorption and mechanical entrapment of polymer during Experiment 6.}
+\label{tab:ipvexp6pol}
+\begin{tabular}{c l l l l l } 
+\toprule
+\textbf{Quantity} & \textbf{Unit} & \textbf{Stage 1} & \textbf{Stage 2} & \textbf{Stage 3} & \textbf{Stage 4} \\ 
+\midrule 
+IPV                & [PV]           & -         & 0.23     & -         & 0.19     \\
+Mech. entrapment   & [mg]          & 1.1       & 1.1      & 1.3       & 1.3       \\ 
+Mech. entrapment   & [mg/g rock]   & 0.0024   & 0.0024     & 0.0028     & 0.0028     \\ 
+Mech. entrapment   & [mg/PV inj]   & 0.24      & -         & 0.02      & -         \\
+Mech. entrapment   & [\% of inj pol]& 1.07       & 1.7       & 0.11       & 1.50       \\ 
+Adsorption         & [mg]          & 15.6      &   \multicolumn{3}{c}{\multirow{2}{15em}{from difference in response curves of stages 1 and 3}}        \\
+Adsorption         & [mg/g rock]   & 0.03      &  \multicolumn{3}{c}{}    \\ 
+\bottomrule
+\end{tabular}
+\end{table}
 
 
+From Figure \ref{cht:injexp6ber1},  Table \ref{tab:ipvexp6uv} and Table \ref{tab:ipvexp6pol} it is seen that there apparently was a significant retention of nanoparticles, especially during Stage 1. Some of the retained mater was released during Stage 4 resulting in a negative IPV. The IPVs calculated from Stage 2 are close to zero. The overall retention of nanoparticles amounted, on average, to 13.3 ± 6.7 \% of injected matter.
 
+The adsorption of polymer was of the same magnitude compared to Experiment 5 with only polymer injection (Table \ref{tab:ipvexp5pol}). However, The IPVs and mechanically entrapped polymer were significant lower.
 
+\subsection{Summary of core flooding experiments}
+The absolute permeabilities of the cores used in the flooding experiments were determined before and after the experiments with nanoparticle and/or polymer injection. The residual resistance factor is defined by the ratio of initial and final permeability for the experiment. The results are shown in Figure \what [5.1]. In total three experiments were conducted with nanoparticles and Berea sandstone but only two determinations of residual resistance factors were done (Berea NP1 and Berea NP2).
 
+As seen in Figure \ref{cht:rrf} contact with only nanoparticles did not change the permeability significantly. Contact with polymer reduced the permeability, especially for the Bentheimer core. The effect of adding nanoparticles to the polymer had different effects on the two different core materials. The decrease in the residual resistance factor for Bentheimer questions the value obtained with only polymer.
+
+Figure \ref{cht:polAds} shows the results from the determination of polymer adsorption. As expected, the adsorption was much less for the almost clean high permeability Bentheimer sandstone compared to Berea sandstones that had lower permeability and most likely significantly higher specific surface area (m2/g rock) It is known that Berea also contain significant amounts of clay minerals.
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/rrf.png}
+    \caption{Residual resistance factors.}
+    \label{cht:rrf}
+\end{figure}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/polAds.png}
+    \caption{Residual resistance factors.}
+    \label{cht:polAds}
+\end{figure}
+
+The inaccessible pore volumes determined are shown in Figure \ref{cht:ipvPol}. For Bentheimer sandstone the IPVs were low and close to the same with and without nanoparticles in the injected fluid. For Berea, the IPV decreased when nanoparticles were added. 
+
+The IPV is a measure for the fraction of the pores that were too small for the large polymer molecules to enter. It is difficult to understand how nanoparticles affected the polymer to enter smaller pores unless the polymer molecules curled up and got lower effective particle diameters in their presence. However, the differential pressure towards the end of stages 1 and 3 were higher with nanoparticles, but not more than the different rates used in the two experiments should give (cf. Figure \ref{cht:injexp5ber1} and Figure \ref{cht:injexp6ber1}). 
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/ipvPol.png}
+    \caption{Residual resistance factors.}
+    \label{cht:ipvPol}
+\end{figure}
+
+IPVs were also calculated for nanoparticles. Also in this case IPVs were calculated based on the integral under the production curves as shown in Figure \what [5.2]. In all mass balance equations, it was assumed that the nanoparticles entered the whole pore volume. and the IPVs thus has a different physical meaning than for polymer. As seen in Figure \ref{cht:ipvNP} most of the IPVs are negative. A negative IPV means that more than one pore volume of nanoparticles was produced during SSW flooding, i.e. some of the nanoparticles retained during injection was released during the subsequent SSW flooding.
+
+For some experiments, the IPV s were calculated based on both refractive index and UV detector responses, and different interpretations of the detector response. The values shown in Figure \ref{cht:ipvNP} are average values and the standard deviations are indicated by arrow bars. The results for Berea NP1 are averages for the experiments conducted in January and February 2016, whereas Berea NP2 are average results for the experiment carried out in June 2016.
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/ipvNP.png}
+    \caption{Residual resistance factors.}
+    \label{cht:ipvNP} % 5.23
+\end{figure}
+
+As seen in Figure \ref{cht:ipvNP}, the IPV values for nanoparticles were negative, but low for Bentheimer sandstone. For Berea sandstone, the IPVs were much lower and the uncertainty in the results are significant. 
+
+Figure \ref{cht:retentionMech} shows the retention of nanoparticles and mechanical entrapment of polymer during all experiments. For nanoparticles in Berea sandstone the average values shown in Figure \ref{cht:retentionBer} are used. For other experiments where more than one datasets exist average values are also used. The two groups of bars to the left in the figure are for experiments where only nanoparticles or only polymer was injected. The two groups to the right are for injection of mixtures of nanoparticles and polymer.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{img/cht/retentionMech.png}
+    \caption{Residual resistance factors.}
+    \label{cht:retentionMech} % 5.24
+\end{figure}
+
+For polymer, the mechanical retention was low in all experiments except for injection of only polymer in Berea sandstone. No errors have been detected in the data processing and ta mechanical retention in the order of 10 \% appears to be real. As already discussed, it is curious that the mechanical retention is close to zero with added nanoparticles. 
+
+The retention of only nanoparticles in Berea is associated with large uncertainty, in the order of ± 10 \% of injected matter (cf. Figure \ref{cht:retentionBer}). The large retention of nanoparticles during injection of the mixtures on stages 1 and 2 can possibly be due to detector response problems. 
 
 
 \section{ Effect of in-situ gelling on water flow}
