@@ -116,14 +116,14 @@ Retention can occur in two different ways, by rock adsorption of the injected po
 \section{Gel systems properties and effects}
 There exist several factors that can alter the gelation time, the viscosity as well as the stability of the formed gel-system. These factors include temperature, salinity, pH, and the formation hardness. The main motivation for understanding these effects is to design and select a proper gel-system that is compatible with the reservoir conditions. This section is dedicated solely for polyacrylamide-based polymers properties and effects.
 
-\subsection{Temperature effects}
+\subsection{Temperature effects} \label{sec:tempEffects}
 
 Reservoir temperature is a major factor that influences the selection criteria of the gel-system to be used in the design of water conformance programs. As discussed earlier, for in-depth water diversion applications, gelation time should be of several weeks, its magnitude depending on characteristics of the reservoir and the nature of the job from an operational standpoint. One of the challenges encountered using Cr3+/HPAM-based polymers is the short gelation times above 60~\celsius~ \citep{Albonico1994}. The use of such gel-systems is possible for near wellbore treatments at low temperature conditions. However, if the temperature is slightly elevated, other considerations should be taken such as the use of un-hydrolyzed PAM and pre-cooling of the near wellbore region \citep{Albonico1994,Al-Muntasheri2012}. Table \ref{tab:gelTimevTemp} shows the gelation times vs temperature for \ce{Cr(acetate)3}/PAM gels.
 
 \begin{table} 
 \centering
 \caption{Gelation times vs temperature for \ce{Cr(acetate)3}/HPAM gels \citep{Albonico1994}}
-\label{tab:gelTimevTemp}
+\label{tab:gelTimevTemp} % 2.1
 \begin{tabular}{c c } 
 \toprule
 \textbf{Temperature} & \textbf{Gelation time}\\
@@ -136,3 +136,141 @@ Reservoir temperature is a major factor that influences the selection criteria o
 \bottomrule
 \end{tabular}
 \end{table}
+
+Albonico et al., proposed the use of gelation-retarding additives in order to reach temperatures at the range of 150~\celsius. \ce{Cr^3+}/HPAM reacts to form a gel very fast as the temperature increases, which makes it not very useful in water-diversion applications. Several complexing agents have the ability to retard the gelation by capturing \ce{Cr^3+} ions in form of complexes that are not reactive with the polymer. However, after a certain period of time, \ce{Cr^3+} ions are released and the gelation is initiated. The rate at which \ce{Cr^3+} is released from the complexes is dependent on the complexing agent. Table \ref{tab:gelTimeHpam} shows gelation times of HPAM solutions with Cr3+ complexes at 90~\celsius. 
+
+\begin{table} 
+\centering
+\caption{Gelation times of HPAM solutions with \ce{Cr^3+} complexes at 90~\celsius \citep{Albonico1994}}
+\label{tab:gelTimeHpam} % 2.2
+\begin{tabular}{l c } 
+\toprule
+\textbf{Cr(III) complex} & \textbf{Gelation time}\\
+ & [hour]\\
+\midrule 
+\ce{Cr(NO3)3}  &                $< 0.02$    \\
+\ce{Cr(acetate)3}  &            $< 0.12$    \\ 
+\ce{K2Cr(glycolate)3}  &        1           \\ 
+\ce{Cr(salicrylate)3}  &        1           \\
+\ce{Cr(bipyridine)3(ClO4)3}  &  8           \\
+\ce{Na3Cr(malonate)3}  &        48          \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+In addition, it has been proven experimentally that extended delays can be obtained by adding non-complexing agents. A linear relationship between the gelling time and concentration has been found. 
+
+Table \ref{tab:gelRetardAgent} presents the results obtained by Albonico et al. showing that the concentration of the non-complexing retarding ligands can significantly enhance the gelation time. However, it is important to note that adding excessive amounts of retarding ligands has an opposite effect as it can block and disable the initiation of gelation. This is because the \ce{Cr^3+}/ligand complexes become more stable compared to the Cr3+/polymer complexes. Therefore, extensive laboratory trials should be conducted before considering field-scale applications \citep{Albonico1994}.
+
+
+\begin{table} 
+\centering
+\caption{Observed range of gelation times of \ce{Cr(malonate)3}/PAM-AMPS in SSW with different retarding agents \citep{Albonico1994}}
+\label{tab:gelRetardAgent}  % 2.3
+\begin{tabular}{l c c } 
+\toprule
+
+\multirow{2}{9em}{\textbf{Retarding Ligand}} & \multicolumn{2}{c}{\textbf{Gelation time (hours)}}\\
+\cmidrule{2-3}
+ & 90~\celsius & 120~\celsius\\
+\midrule 
+Gycolate      & 0.9 - 59  &     0.25 – 17      \\
+Salicylate    & 0.9 - 27  &     0.25 – 17       \\ 
+Malonate      & 0.9 - 215  &    0.25 - 42    \\ 
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\citet{Sydansk1993} reported as well that it is possible to obtain gels that can be applied to high temperature reservoirs reaching 126~\celsius using \ce{Cr^3+}-carboxylate complex with low molecular weight and HPAM with a low degree with hydrolysis. The carboxylate anion suggested by Sydansk is ``\textit{acetate}" its availability and low price as a commodity. Moreover, it is important to note that Sydansk’s experiments were based on near-wellbore treatments. 
+
+According to Sydansk, for intermediate reservoir temperatures of about 60~\celsius, low HPAM concentration (1 wt. \%) restricted the formation of the gel. In addition, at low hydrolysis levels ($<0.1$), gelation was not observed. Concentrations of 2, 3, and 4 wt. \% were investigated in the experiments and showed formation of rigid gel according to the experiment specifications. The polymer had a molecular weight of 2 MDa, the degree of hydrolysis was 0.9 and the temperatures was 60~\celsius~ or less. The cross-liker was \ce{Cr(acetate)3}. Figure \ref{fig:viscSydansk} shows the development of the viscosity with time for different HPAM concentrations.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/viscSydansk.png}    \caption{Viscosity vs. Time for 2 MDa HPAM (PA) in fresh water aged at 60~\celsius~\citep{Sydansk1993}}
+    \label{fig:viscSydansk} % 2.8
+\end{figure}
+
+The general findings from the experiments were that as the HPAM concentration increases, the rate of gelation and the dynamic viscosity increase. Other findings include the unchanged rigidity and good stability of the tested gels for more than 730 days.
+
+As has been discussed earlier \citep{Albonico1994}, the increased temperature directly affects the rate of gelation. In order to delay the gelation time, Sydansk concluded from several experiments where low molecular weight polymers (100,000 – 500,000 Da) should be used with ultra-low degree of hydrolysis, $< 0.1$. The phenomenon behind the applicability of using ultra-low hydrolysis degree is auto-hydrolysis that takes place only at elevated reservoir temperatures ($> 75$~\celsius) \citep{Sydansk1993, Fletcher2010}. The rate of auto-hydrolysis is dependent on both temperature and pH.
+
+In order to enhance the thermal stability when HPAM based polymers are considered, other monomers can be co-polymerized with polyacrylamide solutions. Poly(vinylpyrrolidone-co-acrylamide) or PVP-AM is an example of a co-polymerized HPAM base. Polyvinylpyrrolidone improves the PAM base to undergo a lower degree of hydrolysis at elevated temperatures \citep{Stahl1988}. As a result, no precipitation takes place as the conversion of the amide groups into the carboxylate groups is minimized \citep{Al-Muntasheri2012}.
+
+Figure \ref{fig:hyrolysisStahl} shows the degree of hydrolysis at 121~\celsius~ for different PVP-Am (60/40 w/w) and a commercial HPAM. As expected, HPAM-based polymer underwent full hydrolysis in less than 10 days of aging time, and was reported to be insoluble in synthetic seawater \citep{Stahl1988}. PVP-Am experienced a certain degree of hydrolysis and stabilized at 40 \% with no precipitation being reported. Additionally, PVP-AM at 150~\celsius~ did not show signs of precipitation despite reaching 60 \% degree of hydrolysis.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/hyrolysisStahl.png}
+    \caption{Degree of hydrolysis for different PVP-Am (60/40 w/w) and a commercial HPAM (PAm) \citep{Stahl1988}}
+    \label{fig:hyrolysisStahl} % 2.9
+\end{figure}
+
+\subsection{Salinity and pH effects}
+Gel systems are prepared using different sources of water. Water sources can be considered as either fresh or saline depending on where it has been obtained from; this can be nearby water wells, treated produced water, or seawater.
+
+\citet{Al-Muntasheri2007} conducted several experiments where two different water sources were examined. Both were used in creating two different gel systems and the apparent viscosity of the polymer solution throughout the gelation period was recorded. The total dissolved solids in the brines were 1186 ppm, and 58348 ppm. Figure \ref{fig:almuntasheriSal} shows the effect of the difference in the salinity of brine. It is clear the effect of increasing the salinity will decrease the gelation time. However, gel systems that were prepared using more saline water exhibited a lower apparent viscosity compared to gel-systems prepared using fresh water.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/almuntasheriSal.png}
+    \caption{Effect of difference in salinity of brine – viscosity vs. time \citep{Al-Muntasheri2007}}
+    \label{fig:almuntasheriSal} % 2.10
+\end{figure}
+
+In addition, Al-Muntasheri et al. investigated furthermore the possibility that if certain salt ions have a great effect on the gelation compared with others. Monovalent (\ce{K+} and \ce{Na+}) cations were tested as shown in Figure \ref{fig:almuntasheriKNa} which shows that potassium has a greater impact compared with sodium. This has been attributed to the greater charge density which is defined as the ionic charge per size of ion. Similarly, a divalent (\ce{Ca^2+}) cation and monovalent cation (\ce{K+}) were tested as shown in Figure \ref{fig:almuntasheriKCa} and resulted in potassium having a greater impact in extending the gelation time compared with calcium. Again, the same reason is applicable since the charge/size ratio of potassium is only half that of calcium. Therefore, it can be concluded that the gelation time is dependent on the charge/size ratio, rather than the valence of the atom.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/almuntasheriKNa.png}
+    \caption{Effect of K and Na cations on gelation time – gelation time vs. ion concentration (PAtBA=A copolymer of acrylamide and tert-butyl acrylate) \citep{Al-Muntasheri2007}}
+    \label{fig:almuntasheriKNa} % 2.11
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/almuntasheriKCa.png}
+    \caption{Effect of K and Ca cations on gelation time – gelation time vs. ion concentration \citep{Al-Muntasheri2007}}
+    \label{fig:almuntasheriKCa} % 2.12
+\end{figure}
+
+The effect of initial pH has been investigated by Al-Muntasheri et al. and the evolution of the viscosity with time was recorded. Adjusting the pH level of the solution could be done by adding variable amount of either HCL (acid) or NaOH (base). Results in Figure \ref{fig:almuntasheriAcidicpH} showed that at very acidic conditions (pH = 3.1) the gel viscosity increased and suddenly collapsed at around 1.3 hours. Furthermore, a less acidic condition (pH = 6.2), a period of stabilization was observed but gel breakage took place at 1.9 hours. 
+
+Following experiments resulted in a conclusion that a basic pH of at least a value of pH = 8 should be considered when designing gel-systems based on PHPA. Figure \ref{fig:almuntasheriBasicpH} shows that the formed gel is stable (opposed to what observed at acidic pH), and the gelation time is dependent on the temperature as discussed in \ref{sec:tempEffects} \citep{Al-Muntasheri2007}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/almuntasheriAcidicpH.png}
+    \caption{Effect of acidic pH (3.1 and 6.2) at constant temperature – viscosity vs. time \citep{Al-Muntasheri2007}}
+    \label{fig:almuntasheriAcidicpH} % 2.13
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/fig/almuntasheriBasicpH.png}
+    \caption{Effect of basic pH (8.3) at different temperatures – viscosity vs. time \citep{Al-Muntasheri2007}}
+    \label{fig:almuntasheriBasicpH} % 2.14
+\end{figure}
+
+\subsection{Hardness effects (concentration of divalent ions)}
+
+HPAM-based polymers have the tendency to precipitate, i.e., they can undergo de-gelation in formations with elevated temperatures with high hardness levels. This is due to the presence of divalent ions, e.g., \ce{Mg^2+}, \ce{Sr^2+}, \ce{Ba^2+}, and \ce{Ca^2+}, where the latter at equal molar levels, has a greater impact on gel stability. Reservoirs with temperatures less than 75~\celsius, the HPAM-based polymers were observed to be stable regardless of the hardness level \ref{Moradi-Araghi1987}. However, at temperatures higher than 75~\celsius, the amide groups in the polymer experienced extensive hydrolysis, due to the reaction with polyvalent ions present in the formation, which results in weakening the 3D gel network \citep{Al-Muntasheri2012, Stahl1989}. This goes in line with results from experiments reported by \citet{Davison1982} where 140 different HPAM-based polymers were examined at 90~\celsius. Most of them showed precipitation during the several weeks test period.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
