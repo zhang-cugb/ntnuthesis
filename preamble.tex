@@ -24,6 +24,7 @@
   \ifstrequal{#1}{O}{Other Symbols}{}}}%
 ]}
 % -----------------------------------------
+\usepackage[titletoc]{appendix}
 \usepackage[section]{placeins} % gives you \FloatBarrier so all floats are printed by then
 % \usepackage{fourier} 
 % \usepackage{array}
@@ -55,6 +56,28 @@
 \usepackage{amsthm}
 %% Print program code
 \usepackage{listings}
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{purple!40!black},
+  commentstyle=\itshape\color{gray},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+\lstset{escapechar=@,style=customc}
 %% Better looking tables
 \usepackage{booktabs} % provides \cmidrule[2pt](lr){1-2}
 \usepackage{multirow}
@@ -77,7 +100,7 @@
 \usepackage[version=4]{mhchem}
 %%%%%%%%%%%%%%%% OTHER PACKAGES
 \usepackage{ textcomp, gensymb } % °C
-
+\usepackage{pdfpages} % include pdf docs in latex
 
 %% Set space between a paragraph and the preceding text
 \setlength{\parskip}{.75em}

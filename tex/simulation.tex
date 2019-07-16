@@ -26,13 +26,13 @@ Since the model is spatially 1-dimensional, the Jacobian matrix in the Newton it
 We consider an immiscible two-phase (water and oil) 1D model with injection of nanoparticles and polymer in solution with water, where capillary and gravitational forces are ignored. We will assume that polymer and sufficiently old nanoparticles forms gel, increasing the water viscosity significantly. The boundary conditions are given by specifying an (time dependent) input rate. 
 
 \subsection{Conservation laws}
-Mass conservation for oil and water read
+Mass conservation \index{mass conservation} for oil and water read
 \begin{equation} \label{eq:massConservation} % eq 5.1
     \phi\frac{\partial S_i}{\partial t}+\frac{\partial u_i}{\partial x} = 0,\quad i = o, w
 \end{equation}
-where $\phi$ is the constant porosity (porosity for oil and water), $S_i=S_i(x,t), i = o,w$ are the phase saturations and $u_i, i=o,w$ are the phase volumetric fluxes. These fluxes are given by Darcy’s law
+where $\phi$ is the constant porosity (porosity for oil and water), $S_i=S_i(x,t), i = o,w$ are the phase saturations and $u_i, i=o,w$ are the phase volumetric fluxes. These fluxes are given by Darcy’s law \index{Darcy’s law}
 \begin{equation} \label{eq:fluxes} % eq 5.2
-    u_i= -k\frac{k_{ri}}{u_i}\frac{\partial P}{\partial x},\quad i = o, w
+    u_i= -k\frac{k_{ri}}{\mu_i}\frac{\partial P}{\partial x},\quad i = o, w
 \end{equation}
 where $P=P(x,t)$  is the pressure and $k$ is the absolute permeability. Here absolute permeability is a tabulated function of absorbed polymer concentration. Furthermore, $k_{ri}, i = o, w$ are the relative permeabilities to oil and water, which are functions of water saturation. In the present formulation, these relative permeabilities are of Corey type
 \begin{subequations}
@@ -80,7 +80,7 @@ The interpolator (signifying degree of gelling) is given by
 \begin{equation} \label{eq:ageEffect} % eq 5.8
     \nu=h(C_n,C_p) \int^{T_1}_{0}m(\tau)p(x,t;\tau)d\tau
 \end{equation}
-where $h(C_n,C_p)$ is a tabulated function, and $m(\tau)$ a weight function defining how the age of the nanoparticles influence gel strength. The (normalized) function $m(\tau), \tau\in[0,T_1]$, measures the increase in water viscosity (that is interpolator value) as a function of nanoparticle aging. Typically $m(\tau)=0$ for $\tau\in[0,T_1]$,  $m^\prime(\tau)>0$ for $\tau\in\langle T_0, T_1\rangle$ , and $m(T_1)=1$ as illustrated in Figure \ref{fig:weightFunc}.
+where $h(C_n,C_p)$ is a tabulated function, and $m(\tau)$ a weight function defining how the age of the nanoparticles influence gel strength. The (normalized) function $m(\tau), \tau\in[0,T_1]$, measures the increase in water viscosity (that is interpolator value) as a function of nanoparticle aging. Typically $m(\tau)=0$ for $\tau\in[0,T_0]$,  $m^\prime(\tau)>0$ for $\tau\in\langle T_0, T_1\rangle$ , and $m(T_1)=1$ as illustrated in Figure \ref{fig:weightFunc}.
 
 \begin{figure}[h]
     \centering
@@ -99,7 +99,7 @@ Not all terms are treated implicitly. The age effect $\int^{T_1}_{0}m(\tau)p(x,t
 We first describe how the conservation equations are solved numerically, and then define how the age profiles are updated and how the age effect is calculated.
 
 \subsection{Conversion equations}
-The phase mobilities are defined as
+The phase \index{mobility} mobilities are defined as
 \begin{equation}
     \lambda_i = \frac{k_{ri}}{\mu_i}, \quad i=w,o
 \end{equation}
@@ -167,7 +167,7 @@ One can also analyze the explicit expression for the matrix to conclude that the
 It is important that  $C^{n+1}_{\textit{NP}, i}$ and $C^{n+1}_{pol, i}$ are scaled in the system of equations. This gives contributions from saturations and concentrations equal footing in the calculation of the residual in each Newton iteration.
 
 \subsection{Updating age profiles}
-At each position, and at each time step, the nanoparticles in solution and the adsorbed nanoparticles each have their own age profile $p$ and $q$. These age profiles are probability distributions on the interval $[0,T_1]$, i.e. $p\geq0$  and $\int^{T_1}_0 p(x,t;\tau)d\tau=1$  , and likewise for  $q$. No gelling (cross-linking) can occur before nanoparticles reach the minimum gelling age  $T_0$. Maximally strong gel may form at a given position and time when all the nanoparticles in solution have reached age $T_1$ (if also $h(C_n,C_p)=1$) the water reaches its maximal viscosity, see (\ref{eq:ageEffect})).
+\index{age function} At each position, and at each time step, the nanoparticles in solution and the adsorbed nanoparticles each have their own age profile $p$ and $q$. These age profiles are probability distributions on the interval $[0,T_1]$, i.e. $p\geq0$  and $\int^{T_1}_0 p(x,t;\tau)d\tau=1$  , and likewise for  $q$. No gelling (cross-linking) can occur before nanoparticles reach the minimum gelling age  $T_0$. Maximally strong gel may form at a given position and time when all the nanoparticles in solution have reached age $T_1$ (if also $h(C_n,C_p)=1$) the water reaches its maximal viscosity, see (\ref{eq:ageEffect})).
 
 The numerical representations of $p(x,t;\tau)$ and $q(x,t;\tau)$ are given as follows: At time $t=t^n$ we let
 \begin{equation}
@@ -259,7 +259,7 @@ The simulation grid is defined by number of grid blocks ($n_x$), the length of t
 
 Saturation functions (relative permeability functions) for oil and water are of Corey-type and are defined in the input file by parameters for residual saturations, end point values and Corey exponents (three parameters for each phase). Mobility change for the water phase is modelled through change in viscosity as function of polymer concentration and when gelling occurs. Relative change in water viscosity as a function of polymer concentration is given as a table input. Reduction in viscosity for water with polymer due to shear thinning is given as a two-variable tabulated function of polymer concentration and relative rate (relative to a reference rate given as input).   
 
-The $h$-function and the age function responsible for the gelling effect as described in the previous section are given as a two-variable tabulated function of polymer and nanoparticle concentration and a tabulated function of time, respectively. 
+The \index{$h$-function} $h$-function and the \index{age function} age function responsible for the gelling effect as described in the previous section are given as a two-variable tabulated function of polymer and nanoparticle concentration and a tabulated function of time, respectively. 
 
 Oil viscosity is set constant. However, the absolute permeability can be reduced by adsorbed polymer, affecting the effective oil and water mobility. Adsorption and desorption isotherms for polymer and nanoparticles are given as tabulated functions of concentration. Desorption can be turned off in the input file.
 
@@ -385,7 +385,7 @@ To compare the results from the developed 1D simulator with a commercial simulat
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{img/cht/sim2dPerm.png}
-    \caption{Comparison of normalised nanoparticle concentration from experiment and from simulation of polymer injection into Berea sandstone.}
+    \caption{Permeability distribution in the heterogenous 2D Eclipse models.}
     \label{cht:sim2dPerm}
 \end{figure}
 
@@ -436,7 +436,7 @@ The full functionality of the simulator was tested by constructing a 100 m long 
 
 Total pore volume (PV) of the model was 24 m$^3$ and an injection rate of 1 PV per 40 days were used (0.6 m$^3$/day). The schedule was set to inject a slug of 0.5 PV polymer and nanoparticle solution followed by 1.5 PV SSW. 
 
-The applied age function for nanoparticles is shown in Figure \ref{cht:ageFunc} where nanoparticles start to crosslink the polymers at age 30 days. Full crosslinking effect for nanoparticles are reached after 33 days. Figure \ref{cht:hFunc} shows the two-variable function $h(C_p,C_n)$  reflecting the gel strength as function of polymer and nanoparticle concentrations.      
+The applied \index{age function} age function for nanoparticles is shown in Figure \ref{cht:ageFunc} where nanoparticles start to crosslink the polymers at age 30 days. Full crosslinking effect for nanoparticles are reached after 33 days. Figure \ref{cht:hFunc} shows the two-variable function $h(C_p,C_n)$  reflecting the gel strength as function of polymer and nanoparticle concentrations.      
 
 \begin{figure}[h] % figure 6.14
     \begin{subfigure}{\textwidth}

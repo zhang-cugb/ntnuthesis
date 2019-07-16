@@ -1,21 +1,23 @@
 \input{preamble.tex}
 
 \begin{document}
-\frontmatter % \maketitle
+\frontmatter \maketitle
 \input{tex/introduction/frontMatter.tex}
 
 \mainmatter
 
 \input{tex/introduction/introduction.tex}
 \input{tex/background.tex}
-\input{tex/literature.tex}
 \input{tex/experimental.tex}
 \input{tex/results.tex}
- \input{tex/simulation.tex}
-% \input{tex/conclusion.tex}
+\input{tex/simulation.tex}
+\input{tex/conclusion.tex}
 
 % back matter
+\addcontentsline{toc}{chapter}{References}
 \bibliography{ref}
+\input{tex/appendix.tex}
+\addcontentsline{toc}{chapter}{Index}
 \printindex
 
 \end{document}

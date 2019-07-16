@@ -184,3 +184,20 @@
 \newcommand{\why}{\colorbox{Apricot}{why?}}
 \newcommand{\what}{\colorbox{Apricot}{?}}
 
+
+\RequirePackage{keyval}
+\RequirePackage{pdfpages}
+\newcommand{\includearticle}[2][]{{%
+  \let \ps@default = \ps@plain
+\def \ntnuthesis@ps {default}
+\def \ps@low {\let\@mkboth\@gobbletwo
+    \let\@oddhead\@empty
+    \def\@oddfoot{\reset@font\hfil\raisebox{-1.25cm}{\thepage}\hfil}%
+    \let\@evenhead\@empty
+    \let\@evenfoot\@oddfoot}
+\let \ps@none = \ps@empty
+  \setkeys{ntnuthesis@keys}{#1}
+  \includepdf[pages={-},pagecommand={\thispagestyle{\ntnuthesis@ps}}]{#2}}}
+\define@key{ntnuthesis@keys}{numbers}{\def \ntnuthesis@ps {#1}}
+\@ifundefined{tc@check@symbol}{%
+  \RequirePackage{textcomp}}{}
