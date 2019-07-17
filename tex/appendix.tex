@@ -10,13 +10,403 @@
 \includearticle[numbers=low]{pdf/ICOUR.pdf}
 % \section{Paper 3}
 \clearpage
-\addcontentsline{toc}{section}{Paper 2}
+\addcontentsline{toc}{section}{Paper 3}
 \includearticle[numbers=low]{pdf/Nanomaterials.pdf}
 
-\chapter{Overview of all prepared gel systems}
+\chapter{Overview of tested gel systems \label{chap:gelSystem}}
+
+\section{Table of gel systems}
+\textbf{T}: Temperature\\
+\textbf{$C_{\text{x}}$}: Concentration of x
+
+\begin{center}
+\begin{longtable}{|c|c|c|c|c|c|c|c|c|}
+\caption{Overview of all prepared and tested gel systems}\\
+\hline
+\textbf{Series} & \textbf{T} &  \textbf{Polymer} & \textbf{$C_{\text{Pol}}$} & \textbf{\textbf{$C_{\text{\ce{Cr^3+}}}$}} & \textbf{$C_{\text{NP}}$} & \textbf{$C_{\text{PVS}}$} &
+\multirow{2}{2em}{\textbf{$\frac{C_{\text{Pol}}}{C_{\text{NP}}}$}} &
+\multirow{2}{2em}{\textbf{$\frac{C_{\text{NP}}}{C_{\text{PVS}}}$}} \\
+ & [\celsius] & & [wt\%] & [ppm] & [wt\%] & [wt\%] & & \\
+\hline
+\endfirsthead
+\multicolumn{9}{c}%
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \vspace{.7cm}\\
+\hline
+\textbf{Series} & \textbf{T} &  \textbf{Polymer} & \textbf{$C_{\text{Pol}}$} & \textbf{\textbf{$C_{\text{\ce{Cr^3+}}}$}} & \textbf{$C_{\text{NP}}$} & \textbf{$C_{\text{PVS}}$} &
+\multirow{2}{2em}{\textbf{$\frac{C_{\text{Pol}}}{C_{\text{NP}}}$}} &
+\multirow{2}{2em}{\textbf{$\frac{C_{\text{NP}}}{C_{\text{PVS}}}$}} \\
+ & [\celsius] & & [wt\%] & [ppm] & [wt\%] & [wt\%] & & \\
+\hline
+\endhead
+\hline \multicolumn{9}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+1	&	50	&	Flopaam 	&	0.994	&	101	&		&		&		&		\\
+2	&	50	&	Alcoflood	&	1.000	&	101	&		&		&		&		\\
+3	&	50	&	Alcomer	&	0.999	&	104	&		&		&		&		\\
+4	&	50	&	Alcoflood	&	1.005	&		&	1.111	&		&	0.90	&		\\
+5	&	50	&	Alcomer	&	0.998	&		&	1.098	&		&	0.91	&		\\
+6	&	50	&	Flopaam 	&	0.496	&		&	1.087	&		&	0.46	&		\\
+7	&	50	&	Alcoflood	&	1.003	&		&	1.062	&		&	0.94	&		\\
+8	&	50	&	Alcomer	&	0.990	&		&	1.064	&		&	0.93	&		\\
+9	&	50	&	Flopaam 	&	0.500	&		&	0.533	&		&	0.94	&		\\
+10	&	50	&	Alcomer	&	0.499	&	129	&		&		&		&		\\
+11	&	50	&	Alcomer	&	0.502	&	156	&		&		&		&		\\
+12	&	50	&	Alcoflood	&	1.996	&	301	&		&		&		&		\\
+13a,b,c	&	50	&	Alcoflood	&	0.502	&	107	&		&		&		&		\\
+13d,e,f	&	50	&	Alcoflood	&	1.000	&	215	&		&		&		&		\\
+13g,h,i	&	50	&	Alcoflood	&	1.994	&	419	&		&		&		&		\\
+14a,b	&	50	&	Alcoflood	&	0.508	&	446	&		&		&		&		\\
+14c,d	&	50	&	Alcoflood	&	1.003	&	409	&		&		&		&		\\
+15	&	50	&	Flopaam 	&	0.500	&	99	&		&		&		&		\\
+16	&	50	&	Alcomer	&	0.502	&	105	&		&		&		&		\\
+17	&	80	&	Alcomer	&	1.002	&		&	0.380	&	0.053	&	2.64	&	7.16	\\
+18	&	80	&	Alcomer	&	1.004	&		&	0.381	&	0.136	&	2.64	&	2.80	\\
+19	&	80	&	Alcomer	&	0.931	&		&	0.352	&	0.273	&	2.64	&	1.29	\\
+20	&	80	&	Alcomer	&	1.000	&		&	0.436	&		&	2.30	&		\\
+21	&	80	&	Alcomer	&	1.001	&		&	0.646	&		&	1.55	&		\\
+22	&	80	&	Alcomer	&	1.011	&		&	1.024	&		&	0.99	&		\\
+23	&	80	&	Alcoflood	&	1.932	&		&	3.038	&		&	0.64	&		\\
+24	&	80	&	Alcoflood	&	1.932	&		&	3.032	&		&	0.64	&		\\
+25	&	80	&	Alcomer	&	0.249	&	22	&		&		&		&		\\
+26	&	80	&	Alcomer	&	0.500	&	30	&		&		&		&		\\
+27	&	80	&	Alcomer	&	0.999	&	30	&		&		&		&		\\
+28	&	80	&	Alcomer	&	0.251	&	58	&		&		&		&		\\
+29	&	80	&	Alcomer	&	0.500	&	53	&		&		&		&		\\
+30	&	80	&	Alcomer	&	0.997	&	64	&		&		&		&		\\
+31	&	80	&	Alcomer	&	0.248	&	109	&		&		&		&		\\
+32	&	80	&	Alcomer	&	0.498	&	111	&		&		&		&		\\
+33	&	80	&	Alcomer	&	0.995	&	113	&		&		&		&		\\
+34	&	80	&	Alcoflood	&	1.932	&		&	3.039	&		&	0.64	&		\\
+35	&	80	&	Alcomer	&	0.498	&	119	&		&		&		&		\\
+36	&	80	&	Flopaam 	&	0.490	&	115	&		&		&		&		\\
+37	&	80	&	Alcomer	&	1.000	&		&	0.380	&	0.054	&	2.63	&	7.05	\\
+38	&	80	&	Flopaam 	&	1.003	&		&	0.381	&	0.054	&	2.63	&	7.06	\\
+39	&	80	&	Alcoflood	&	1.999	&		&	0.381	&	0.054	&	5.24	&	7.12	\\
+40	&	80	&	Alcomer	&	0.502	&		&	0.381	&	0.054	&	1.32	&	7.06	\\
+41	&	80	&	Flopaam 	&	0.502	&		&	0.381	&	0.054	&	1.32	&	7.12	\\
+42	&	80	&	Alcomer	&	0.500	&	60	&		&		&		&		\\
+43	&	80	&	Alcomer	&	0.500	&	31	&		&		&		&		\\
+44	&	80	&	Alcomer	&	0.997	&		&	0.191	&	0.027	&	5.23	&	7.05	\\
+45	&	80	&	Alcomer	&	0.997	&		&	0.096	&	0.013	&	10.40	&	7.12	\\
+46	&	80	&	Alcomer	&	0.505	&	41	&		&		&		&		\\
+47	&	80	&	Alcoflood	&	1.931	&		&	3.036	&		&	0.64	&		\\
+\end{longtable}
+\label{tab:gelSystemSummary}
+\end{center}
 
 
-\chapter{Simulator input}
+\section{Viscosity charts for gel systems}
+What follows is a list of charts illustrating how the viscosity of the different prepared samples changed with time. 
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/1.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/2.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/3.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/4.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/5.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/6.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/7.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/8.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 1 through 8}
+        \label{fig:visc1-8}
+\end{figure}
+
+
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/9.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/10.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/11.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/12.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/13.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/14.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/15.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/16.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 9 through 16}
+        \label{fig:visc9-16}
+\end{figure}
+
+
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/17.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/18.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/19.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/20.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/21.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/22.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/23-1.PNG}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/23-2.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 17 through 23}
+        \label{fig:visc9-16}
+\end{figure}
+
+
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/24-1.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/24-2.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/25.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/26.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/27.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/28.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/29.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/30.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 24 through 30}
+        \label{fig:visc9-16}
+\end{figure}
+
+
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/31.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/32.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/33.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/34-1.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/34-2.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/35.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/36.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/37.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 31 through 37}
+        \label{fig:visc9-16}
+\end{figure}
+
+
+\begin{figure}
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/38.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/39.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/40.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/41.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/42.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/43.png}
+     \end{subfigure}
+    }\\
+    \makebox[\linewidth][c]{%
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/44.png}
+     \end{subfigure}
+    %  \hfill
+     \begin{subfigure}[b]{0.6\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/visc/45.png}
+     \end{subfigure}
+    }\\
+        \caption{Viscosity vs. time, series 38 through 45}
+        \label{fig:visc9-16}
+\end{figure}
+
+
+\begin{figure}
+         \centering
+         \includegraphics[width=.65\textwidth]{img/visc/46.png}
+         \caption{Viscosity vs. time, series 46}
+         \label{fig:visc46}
+\end{figure}
+
+\chapter{Simulator Input \label{chap:simInput}}
 \lstset{language=C}
 
 The mathematical and numerical model has been implemented in an approximately 3000 lines long c-code. The simulator is relatively fast and seems robust with regards to convergence. The input for a simulation case is file based with a certain fixed format. 
@@ -29,7 +419,7 @@ In the input file example below, all additional explanatory text (comments) are 
 The following is a specification of input format for the 1D nano-simulator.
 The input format is fixed, only white space between entries can have an arbitrary number of blanks, end of lines, or tabs (complying to the fscanf routine in c). The order of the keywords must be as in the example below. Keywords are not read and interpreted.
 Keywords (or some string) and units (or some string) must be explicitly included in the text as given below, as the program expects strings just as in the example below.
-Note that for a real input file no comments can be included, .i.e. everything bracketed with /*  */ must be removed in this example file before the executive nano-simulator can read it properly. 
+Note that for a real input file no comments can be included, \textit{i.e.,} everything bracketed with /*  */ must be removed in this example file before the executive nano-simulator can read it properly. 
 Not all keywords are commented below. Inputs that are self-explanatory are uncommented.
  
 
@@ -397,6 +787,5 @@ PolymerConcentration 0.0 g/g
 
 \end{lstlisting}
 
-
-
 \end{appendices}
+\clearpage

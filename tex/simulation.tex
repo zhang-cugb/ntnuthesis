@@ -80,7 +80,7 @@ The interpolator (signifying degree of gelling) is given by
 \begin{equation} \label{eq:ageEffect} % eq 5.8
     \nu=h(C_n,C_p) \int^{T_1}_{0}m(\tau)p(x,t;\tau)d\tau
 \end{equation}
-where $h(C_n,C_p)$ is a tabulated function, and $m(\tau)$ a weight function defining how the age of the nanoparticles influence gel strength. The (normalized) function $m(\tau), \tau\in[0,T_1]$, measures the increase in water viscosity (that is interpolator value) as a function of nanoparticle aging. Typically $m(\tau)=0$ for $\tau\in[0,T_0]$,  $m^\prime(\tau)>0$ for $\tau\in\langle T_0, T_1\rangle$ , and $m(T_1)=1$ as illustrated in Figure \ref{fig:weightFunc}.
+where $h(C_n,C_p)$ \index{$h$-function} is a tabulated function, and $m(\tau)$ a weight function defining how the age of the nanoparticles influence gel strength. The (normalized) function $m(\tau), \tau\in[0,T_1]$, measures the increase in water viscosity (that is interpolator value) as a function of nanoparticle aging. Typically $m(\tau)=0$ for $\tau\in[0,T_0]$,  $m^\prime(\tau)>0$ for $\tau\in\langle T_0, T_1\rangle$ , and $m(T_1)=1$ as illustrated in Figure \ref{fig:weightFunc}.
 
 \begin{figure}[h]
     \centering
@@ -167,7 +167,7 @@ One can also analyze the explicit expression for the matrix to conclude that the
 It is important that  $C^{n+1}_{\textit{NP}, i}$ and $C^{n+1}_{pol, i}$ are scaled in the system of equations. This gives contributions from saturations and concentrations equal footing in the calculation of the residual in each Newton iteration.
 
 \subsection{Updating age profiles}
-\index{age function} At each position, and at each time step, the nanoparticles in solution and the adsorbed nanoparticles each have their own age profile $p$ and $q$. These age profiles are probability distributions on the interval $[0,T_1]$, i.e. $p\geq0$  and $\int^{T_1}_0 p(x,t;\tau)d\tau=1$  , and likewise for  $q$. No gelling (cross-linking) can occur before nanoparticles reach the minimum gelling age  $T_0$. Maximally strong gel may form at a given position and time when all the nanoparticles in solution have reached age $T_1$ (if also $h(C_n,C_p)=1$) the water reaches its maximal viscosity, see (\ref{eq:ageEffect})).
+\index{age function} At each position, and at each time step, the nanoparticles in solution and the adsorbed nanoparticles each have their own age profile $p$ and $q$. These age profiles are probability distributions on the interval $[0,T_1]$, \textit{i.e.}, $p\geq0$  and $\int^{T_1}_0 p(x,t;\tau)d\tau=1$  , and likewise for  $q$. No gelling (cross-linking) can occur before nanoparticles reach the minimum gelling age  $T_0$. Maximally strong gel may form at a given position and time when all the nanoparticles in solution have reached age $T_1$ (if also $h(C_n,C_p)=1$) the water reaches its maximal viscosity, see (\ref{eq:ageEffect})).
 
 The numerical representations of $p(x,t;\tau)$ and $q(x,t;\tau)$ are given as follows: At time $t=t^n$ we let
 \begin{equation}
@@ -223,7 +223,7 @@ Using (\ref{eq:elimiateQ}) we can then eliminate $q_i^{n+1,k}$ in (\ref{eq:massC
 
 Thus, formulating the mass conservation for nanoparticles of age $\left[\tau^k, \tau^k+\Delta\tau\right]$ using (\ref{eq:massNP}) and (\ref{eq:massChangeNP}) (having eliminated  $q_i^{n+1,k}$) we simply obtain an explicit formula $p_i^{n+1,k}$. Then from (\ref{eq:elimiateQ}) we find the values for $q_i^{n+1,k}$.
 
-Assume now that the mass of nanoparticles decreases at a given position during a time step, i.e. that (\ref{eq:massNP}) is positive. Then if the option for no desorption of nanoparticles is set, the age profile for the adsorbed nanoparticles stays the same (except that all the adsorbed nanoparticles age the amount of the time step), and $C_{an}(C_{n,i}^{n+1})- C_{an}(C_{n,i}^{n})=0$. Thus (\ref{eq:elimiateQ}) is satisfied, and $q_i^{n+1,k}=q_i^{n,k}$, and the mass conservation for $p_i^{n+1,k}$ can be solved directly.
+Assume now that the mass of nanoparticles decreases at a given position during a time step, \textit{i.e.}, that (\ref{eq:massNP}) is positive. Then if the option for no desorption of nanoparticles is set, the age profile for the adsorbed nanoparticles stays the same (except that all the adsorbed nanoparticles age the amount of the time step), and $C_{an}(C_{n,i}^{n+1})- C_{an}(C_{n,i}^{n})=0$. Thus (\ref{eq:elimiateQ}) is satisfied, and $q_i^{n+1,k}=q_i^{n,k}$, and the mass conservation for $p_i^{n+1,k}$ can be solved directly.
 
 If desorption of nanoparticles can occur, then (\ref{eq:elimiateQ}) still applies, and $p_i^{n+1,k}$ and  $q_i^{n+1,k}$ can be found as previously described for the case when (\ref{eq:massNP}) is negative. 
 
@@ -253,7 +253,7 @@ As mentioned so far, the Newton iterations behave excellent showing second order
 
 \section{Initial testing of 1D simulator}
 
-Input to the simulator is text based and input functions are tabulated. For example, the change of water viscosity as function of polymer concentration is given as a table with polymer concentration in the first column and relative change in viscosity for the water in the second column. An example input file for the simulator with comments describing each input parameter is listed in Appendix \what. 
+Input to the simulator is text based and input functions are tabulated. For example, the change of water viscosity as function of polymer concentration is given as a table with polymer concentration in the first column and relative change in viscosity for the water in the second column. An example input file for the simulator with comments describing each input parameter is listed in Appendix \ref{chap:simInput}. 
 
 The simulation grid is defined by number of grid blocks ($n_x$), the length of the model and the cross-sectional area of the model. Porosity and permeability is given by constants for the whole model. When nanoparticles or polymer is present in the water phase, inaccessible pore volume (IPV) can be defined to reduce the porosity for these particles in solution. Initial water saturation can be given explicitly for each grid block ($n_x$-values) or as a constant for the model, oil saturation is calculated from water saturation. Simulations reported here has no oil in the models.
 

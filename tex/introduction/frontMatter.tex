@@ -1,20 +1,20 @@
 % % DEDICATION
 % \begin{dedication}
-% To my parents, who inspired me to commence the PhD;\\
-% To my sister, Hanieh, who propelled me to  carry on with it;\\
+% To my parents, who inspired me to commence the PhD work;\\
+% To my sister, Hanieh, who propelled me to carry on with it;\\
 % To my love, Helia, who motivated me to bring it to a conclusion.
 % \end{dedication}
 
 % % PREFACE
-% \clearpage{\thispagestyle{empty}\cleardoublepage}
-% \setcounter{page}{1}
-% \chapter*{Preface}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+\setcounter{page}{1}
+\chapter*{Preface}
 
-% This thesis is submitted to the Norwegian University of Science and Technology (NTNU) for partial fulfillment of the requirements for the degree of Philosophiae Doctor.
+This thesis is submitted to the Norwegian University of Science and Technology (NTNU) for partial fulfillment of the requirements for the degree of Philosophiae Doctor.
 
-% The work presented in this thesis was conducted at the Department of Geoscience and Petroleum (IGP), NTNU, Trondheim. Professor Ole Torsæter was the main supervisor. Dr. Torleif Holt and Dr. Jan Åge Stensen from SINTEF Industry were the co-supervisors. Testing infrastructures at SINTEF Industry, NTNU IGP and NTNU NanoLab were used in the experimental work.  
+The work presented in this thesis was conducted at the Department of Geoscience and Petroleum (IGP), NTNU, Trondheim. Professor Ole Torsæter was the main supervisor. Dr. Torleif Holt and Dr. Jan Åge Stensen from SINTEF Industry were the co-supervisors. Testing infrastructures at SINTEF Industry, NTNU IGP and NTNU NanoLab were used in the experimental work.  
 
-% The research was funded by The Research Council of Norway, SINTEF, NTNU, Aker BP ASA, Engie E\&P Norge AS, Eni Norge AS and Lundin Norway AS.
+The research was funded by The Research Council of Norway, SINTEF, NTNU, Aker BP ASA, Engie E\&P Norge AS, Vår Energi and Lundin Norway AS.
 
 
 % ABSTRACT
@@ -33,38 +33,93 @@ This PhD work was part of the HyGreGel (Hybrid Green nano-Gels) project. As a re
 % ACKNOWLEDGEMENT
 % \clearpage{\thispagestyle{empty}\cleardoublepage}
 % \chapter*{Acknowledgement}
-% {\centering {\Huge \colorbox{Red}{\color{white}!}}\par}
+% This work would not be accomplished without the help and support of so many people.
+
+% Thank you Dr. Ole Trosæter, my advisor, for trusting me with this topic. I am thankful for all the help and support you provided me during the past few years. Carrying out this PhD has been such a unique experience  and especially at the harder times...
 
 
 %% LISTS (content, figures, tables)
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \tableofcontents
 \clearpage{\thispagestyle{empty}\cleardoublepage}
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
 \clearpage{\thispagestyle{empty}\cleardoublepage}
+\addcontentsline{toc}{chapter}{List of Tables}
 \listoftables
 
 % NOMENCLATURE
 \clearpage{\thispagestyle{empty}\cleardoublepage}
+
 \nomenclature[A]{EOR}{Enhanced Oil Recovery}
 \nomenclature[A]{NTNU}{Norwegian University of Science and Technology}
 \nomenclature[A]{SSW}{Synthetic sea water}
 \nomenclature[A]{HyGreGel}{Hybrid Green nano-Gels}
 \nomenclature[A]{HPAM}{Partially hydrolyzed polyacrylamide}
+\nomenclature[A]{PAM}{polyacrylamide}
 \nomenclature[A]{SP}{sub-project}
 \nomenclature[A]{FN}{FunzioNano}
-\nomenclature[A]{PEC}{Polyelectrolyte complexes}
 \nomenclature[A]{IPV}{Inaccessible pore volume}
+\nomenclature[A]{PV}{pore volume}
 \nomenclature[A]{RRF}{Residual resistance factor}
 \nomenclature[A]{IGP}{Department of Geoscience and Petroleum at NTNU}
 \nomenclature[A]{DMN}{Department of Materials and Nanotechnology at SINTEF Industry}
-\nomenclature[A]{DER}{Department of Exploration and Reservoir Technology at SINTEF Industry}
+\nomenclature[A]{DP}{Department of Petroleum at SINTEF Industry}
 \nomenclature[A]{DIP}{Department of Industrial Process Technology at SINTEF Industry}
 \nomenclature[A]{wt.\%}{weight percent}
+\nomenclature[A]{PEC}{Polyelectrolyte complexes}
 \nomenclature[A]{DS}{dextran sulphate}
 \nomenclature[A]{PEI}{polyethyleneimine}
 \nomenclature[A]{POSS}{polyhedral oligomeric silsequioxanes}
 \nomenclature[A]{PVS}{polyvinyl sulfonate}
+\nomenclature[A]{ppm}{parts per million}
+\nomenclature[A]{MDa}{Mega Daltons}
+\nomenclature[A]{UV}{ultra violet}
+\nomenclature[A]{inj}{injection}
+\nomenclature[A]{pol}{polymer}
+\nomenclature[A]{NP}{nanoparticles}
 
+
+\nomenclature[S]{$\tau$}{degree of hydrolysis}
+\nomenclature[S]{$y$}{molar concentration of carboxylate groups}
+\nomenclature[S]{$x$}{molar concentration of the amide groups}
+\nomenclature[S]{$\frac{c}{c_0}$}{relative fines concentration}
+\nomenclature[S]{$\phi$}{porosity}
+\nomenclature[S]{$x$}{distance}
+\nomenclature[S]{$u$}{flowrate}
+\nomenclature[S]{$T$}{temperature}
+\nomenclature[S]{$C_x$}{concentration of x (or phase x)}
+\nomenclature[S]{$S_i$}{saturation of phase $i$}
+\nomenclature[S]{$u_i$}{volumetric flux of phase $i$}
+\nomenclature[S]{$P$}{pressure}
+\nomenclature[S]{$k$}{absolute permeability}
+\nomenclature[S]{$k_{ri}$}{relative permeability to phase $i$}
+\nomenclature[S]{$S_{or}$}{residual oil saturation}
+\nomenclature[S]{$S_{wi}$}{irreducible water saturation}
+\nomenclature[S]{$k^0_{ri}$}{endpoint relative permeability of phase $i$}
+\nomenclature[S]{$\alpha_i$}{Corey exponent for phase $i$}
+\nomenclature[S]{$C_{ai}$}{adsorbed concentrations per mass of the rock for phase $i$}
+\nomenclature[S]{$\phi^{(i)}$}{porosity (acessible pore space) for nanopartilces or polymer}
+\nomenclature[S]{$\rho_r$}{rock mass density}
+\nomenclature[S]{$p(x,t;\tau)$}{age distribution of nanoparticles in solution at position and time}
+\nomenclature[S]{$q(x,t;\tau)$}{age distribution of adsorbed nanoparticles at position and time}
+\nomenclature[S]{$T_1$}{maximal age}
+\nomenclature[S]{$\mu^p_w$}{water viscosity with only polymer present}
+\nomenclature[S]{$\mu_w^{\max}$}{maximal possible water viscosity}
+\nomenclature[S]{$a (C_p)$}{viscosity increase factor of polymer with no shear-thinning}
+\nomenclature[S]{$s(C_p, u_w)$}{viscosity decrease factor due to shear thinning}
+\nomenclature[S]{$h(C_n,C_p)$}{$h$-function}
+\nomenclature[S]{$m(\tau)$}{weight function}
+\nomenclature[S]{$\nu$}{interpolator, signifying degree of gelling}
+\nomenclature[S]{$\lambda_i$}{mobility of phase $i$}
+\nomenclature[S]{$f_i$}{fractional flow of phase $i$}
+\nomenclature[S]{$A$}{cross sectional area}
+\nomenclature[S]{$Q_w^{n+1}$}{volumetric injection rate for water in the time interval $\left[t^n,t^{n+1}\right]$}
+\nomenclature[S]{$m^n$}{number of ages at time $t^n$}
+\nomenclature[S]{$\omega$}{Todd-Longstaff mixing parameter}
+\nomenclature[S]{$\mu_{p_\textit{eff}}$}{effective viscosity}
+\nomenclature[S]{$\mu_m(C_p)$}{viscosity of a fully mixed polymer solution}
+
+\addcontentsline{toc}{chapter}{Nomenclature}`
 \printnomenclature
 
